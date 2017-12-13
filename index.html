@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function jsonpCallback(res){
+			// console.log(res);
+			for(let item in res) {
+				console.log(res[item])
+			}
+		}
+
+		let JSONP = document.createElement('script');
+		JSONP.type = "text/javascript";
+		JSONP.src = "text.php?callback=jsonpCallback";
+		document.getElementsByTagName('head')[0].appendChild(JSONP)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
